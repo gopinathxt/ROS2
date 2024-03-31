@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot 
+  name="/home/gt/ros2_ws/src/manipulator" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000176013277077854 2.64595937628093E-05 0.00467381756171161"
+        rpy="0 0 0" />
+      <mass
+        value="0.0154017388397" />
+      <inertia
+        ixx="1.93899223843385E-06"
+        ixy="2.1852108385258E-10"
+        ixz="1.79528443988992E-08"
+        iyy="4.08400635151184E-06"
+        iyz="-2.69880191749212E-09"
+        izz="5.36975849254508E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/gt/ros2_ws/src/manipulator/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/gt/ros2_ws/src/manipulator/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_link">
+      <material>Gazebo/Black</material>
+  </gazebo>
+
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.048536 5.2042E-18 0.00011402"
+        rpy="0 0 0" />
+      <mass
+        value="0.0090407" />
+      <inertia
+        ixx="1.4202E-07"
+        ixy="-1.9191E-21"
+        ixz="-5.2303E-08"
+        iyy="9.4523E-06"
+        iyz="-1.4889E-23"
+        izz="9.4527E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/gt/ros2_ws/src/manipulator/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/gt/ros2_ws/src/manipulator/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="link_1">
+      <material>Gazebo/Red</material>
+  </gazebo>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="-0.00071223 0.00010707 0.01752"
+      rpy="-1.5708 -1.2961 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.040914 0 0.003"
+        rpy="0 0 0" />
+      <mass
+        value="0.0051534" />
+      <inertia
+        ixx="5.8221E-08"
+        ixy="1.0902E-21"
+        ixz="-1.3977E-23"
+        iyy="3.2194E-06"
+        iyz="7.6807E-24"
+        izz="3.2467E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/gt/ros2_ws/src/manipulator/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/gt/ros2_ws/src/manipulator/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="link_2">
+      <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <joint
+    name="joint_2"
+    type="continuous">
+    <origin
+      xyz="0.099274 0 0.004"
+      rpy="0 0 -1.3668" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+  <xacro:macro name="default_transmission" params="number">
+        <transmission name="transmission_${number}">
+            <plugin>transmission_interface/SimpleTransmission</plugin>
+            <actuator name="motor_${number}" role="actuator1"/>
+            <joint name="joint_${number}"    role="joint1">
+                <mechanical_reduction>1.0</mechanical_reduction>
+            </joint>
+        </transmission>
+  </xacro:macro>
+
+  <xacro:default_transmission number="1"/>
+  <xacro:default_transmission number="2"/>
+
+
+
+</robot>

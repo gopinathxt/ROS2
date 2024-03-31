@@ -1,0 +1,22 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/gt/ros2_ws/build/urdf_pub",
+        "/home/gt/ros2_ws/install/urdf_pub/lib/python3.10/site-packages",
+        "/home/gt/ros2_ws/build/tm_sld",
+        "/home/gt/ros2_ws/install/tm_sld/lib/python3.10/site-packages",
+        "/home/gt/ros2_ws/build/my_urdf",
+        "/home/gt/ros2_ws/install/my_urdf/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/gt/ros2_ws/build/urdf_pub",
+        "/home/gt/ros2_ws/install/urdf_pub/lib/python3.10/site-packages",
+        "/home/gt/ros2_ws/build/tm_sld",
+        "/home/gt/ros2_ws/install/tm_sld/lib/python3.10/site-packages",
+        "/home/gt/ros2_ws/build/my_urdf",
+        "/home/gt/ros2_ws/install/my_urdf/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

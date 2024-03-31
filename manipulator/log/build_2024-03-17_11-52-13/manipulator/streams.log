@@ -1,0 +1,30 @@
+[0.054s] Invoking command in '/home/gt/ros2_ws/src/manipulator/build/manipulator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gt/ros2_ws/install/urdf_pub:/home/gt/ros2_ws/install/tm_sld:/home/gt/ros2_ws/install/my_urdf:/opt/ros/humble /usr/bin/cmake --build /home/gt/ros2_ws/src/manipulator/build/manipulator -- -j16 -l16
+[0.072s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.178s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.183s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.249s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.249s] -- Configured cppcheck include dirs: 
+[0.249s] -- Configured cppcheck exclude dirs and/or files: 
+[0.250s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.254s] -- Added test 'lint_cmake' to check CMake code style
+[0.256s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.269s] -- Added test 'uncrustify' to check C / C++ code style
+[0.269s] -- Configured uncrustify additional arguments: 
+[0.271s] -- Added test 'xmllint' to check XML markup files
+[0.271s] -- Configuring done
+[0.272s] [31mCMake Error at CMakeLists.txt:14 (add_executable):
+[0.273s]   Cannot find source file:
+[0.273s] 
+[0.273s]     manipulator/slider_control.py
+[0.273s] 
+[0.273s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[0.273s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[0.273s] 
+[0.273s] [0m
+[0.273s] [31mCMake Error at CMakeLists.txt:14 (add_executable):
+[0.273s]   No SOURCES given to target: slider_control
+[0.273s] 
+[0.273s] [0m
+[0.273s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[0.274s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.276s] Invoked command in '/home/gt/ros2_ws/src/manipulator/build/manipulator' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gt/ros2_ws/install/urdf_pub:/home/gt/ros2_ws/install/tm_sld:/home/gt/ros2_ws/install/my_urdf:/opt/ros/humble /usr/bin/cmake --build /home/gt/ros2_ws/src/manipulator/build/manipulator -- -j16 -l16

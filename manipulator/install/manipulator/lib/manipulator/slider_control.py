@@ -1,0 +1,1 @@
+/home/gt/ros2_ws/src/manipulator/manipulator/src/slider_control.py
